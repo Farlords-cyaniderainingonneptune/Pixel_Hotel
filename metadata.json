@@ -1,0 +1,6 @@
+{
+  "name": "Pixel Hotel: AI Product Manager",
+  "description": "A retro pixel art browser tycoon simulation game where you lead AI product management for a smart hotel, deploying dynamic pricing, autonomous concierges, predictive maintenance, and managing sprints.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

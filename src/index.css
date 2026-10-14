@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --pixel-font: 'Press Start 2P', monospace;
+    --retro-font: 'Silkscreen', monospace;
+    --term-font: 'VT323', monospace;
+  }
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-retro {
+  font-family: 'Silkscreen', monospace;
+}
+
+.font-terminal {
+  font-family: 'VT323', monospace;
+}
+
+/* Pixel art rendering */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Retro Pixel Borders and Shadows */
+.pixel-box {
+  box-shadow: 
+    -3px 0 0 0 #000,
+    3px 0 0 0 #000,
+    0 -3px 0 0 #000,
+    0 3px 0 0 #000;
+}
+
+.pixel-box-amber {
+  box-shadow: 
+    -2px 0 0 0 #f59e0b,
+    2px 0 0 0 #f59e0b,
+    0 -2px 0 0 #f59e0b,
+    0 2px 0 0 #f59e0b;
+}
+
+.pixel-box-cyan {
+  box-shadow: 
+    -2px 0 0 0 #06b6d4,
+    2px 0 0 0 #06b6d4,
+    0 -2px 0 0 #06b6d4,
+    0 2px 0 0 #06b6d4;
+}
+
+.pixel-btn {
+  position: relative;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.85);
+  transition: all 0.08s ease-in-out;
+}
+
+.pixel-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.9);
+}
+
+.pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.9);
+}
+
+/* CRT Scanlines Overlay */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111420;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border: 1px solid #0f172a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
